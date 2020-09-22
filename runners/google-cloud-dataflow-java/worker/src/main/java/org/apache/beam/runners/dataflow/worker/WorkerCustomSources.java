@@ -754,7 +754,7 @@ public class WorkerCustomSources {
   // Commit at least once every 10 seconds or 10k records.  This keeps the watermark advancing
   // smoothly, and ensures that not too much work will have to be reprocessed in the event of
   // a crash.
-  @VisibleForTesting static int maxUnboundedBundleSize = 10000;
+  @VisibleForTesting static int maxUnboundedBundleSize = 1000000;
 
   @VisibleForTesting
   static final Duration MAX_UNBOUNDED_BUNDLE_READ_TIME = Duration.standardSeconds(10);
